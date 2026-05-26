@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Modern Stopwatch</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Stopwatch Main Card -->
+    <div class="stopwatch-card">
+      
+      <!-- Logo / Header -->
+      <div class="header">
+        <span class="logo-emoji">⏱️</span>
+        <h1>CHRONOS</h1>
+        <p class="subtitle">Simple & Precise Timer</p>
+      </div>
+
+      <!-- Time Display -->
+      <div class="timer-display">
+        <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>.<span id="milliseconds" class="ms">00</span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="buttons-container">
+        <button id="btn-reset" class="btn btn-reset">Reset</button>
+        <button id="btn-start" class="btn btn-start">Start</button>
+        <button id="btn-lap" class="btn btn-lap" disabled>Lap</button>
+      </div>
+
+      <!-- Lap Records Table Section -->
+      <div id="laps-section" class="laps-section hidden">
+        <h3>Recorded Laps</h3>
+        <div class="table-wrapper">
+          <table class="laps-table">
+            <thead>
+              <tr>
+                <th>Lap</th>
+                <th>Lap Time</th>
+                <th>Split Time</th>
+              </tr>
+            </thead>
+            <tbody id="laps-tbody">
+              <!-- Dynamically injected laps will go here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
